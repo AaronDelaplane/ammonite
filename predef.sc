@@ -20,12 +20,12 @@ import $ivy.`org.tpolecat::doobie-postgres:0.8.6`
 
 import doobie._
 import doobie.implicits._
-
+import doobie.util.ExecutionContexts
 import cats._
+import cats.data._
 import cats.effect._
 import cats.implicits._
-
-import doobie.util.ExecutionContexts
+import fs2.Stream
 
 implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
 
@@ -37,4 +37,4 @@ val xa = Transactor.fromDriverManager[IO](
   Blocker.liftExecutionContext(ExecutionContexts.synchronous) // just for testing
 )
 
-
+sql"select code, name, population, gnp from country".query[(Code, Country2)].stream.take(5).compile.toList.map(_.toMap).quick.unsafeRunSync
