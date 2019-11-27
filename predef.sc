@@ -18,13 +18,9 @@ import $ivy.`co.fs2::fs2-io:2.1.0`
 import $ivy.`org.tpolecat::doobie-core:0.8.6`
 import $ivy.`org.tpolecat::doobie-postgres:0.8.6`
 
-import doobie._
-import doobie.implicits._
-import doobie.util.ExecutionContexts
-import cats._
-import cats.data._
-import cats.effect._
-import cats.implicits._
+import doobie._, doobie.implicits._, doobie.util.ExecutionContexts
+import cats._, cats.data._, cats.effect._, cats.implicits._
+import org.http4s._, org.http4s.dsl.io._, org.http4s.implicits._
 import fs2.Stream
 
 implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
@@ -36,5 +32,3 @@ val xa = Transactor.fromDriverManager[IO](
   "",                          // password
   Blocker.liftExecutionContext(ExecutionContexts.synchronous) // just for testing
 )
-
-sql"select code, name, population, gnp from country".query[(Code, Country2)].stream.take(5).compile.toList.map(_.toMap).quick.unsafeRunSync
