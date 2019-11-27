@@ -23,6 +23,8 @@ import cats._, cats.data._, cats.effect._, cats.implicits._
 import org.http4s._, org.http4s.dsl.io._, org.http4s.implicits._
 import fs2.Stream
 
+import java.util.UUID
+
 implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
 
 val xa = Transactor.fromDriverManager[IO](
