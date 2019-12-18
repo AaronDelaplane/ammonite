@@ -52,6 +52,7 @@ import fs2.Stream
 // scala standard library ----------------------------------------------------------------------------------------------
 import scala.util._
 import scala.util.matching._
+import scala.concurrent.duration
 
 // java standard library -----------------------------------------------------------------------------------------------
 import java.util.UUID
