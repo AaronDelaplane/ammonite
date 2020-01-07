@@ -47,7 +47,13 @@ val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgres
 // fs2 -----------------------------------------------------------------------------------------------------------------
 import $ivy.`co.fs2::fs2-core:2.1.0`
 import $ivy.`co.fs2::fs2-io:2.1.0`
+
 import fs2.Stream
+
+// scalacheck ---------------------------------------------------------------------------------------------------------
+import $ivy.`org.scalacheck::scalacheck:1.14.3`
+
+import org.scalacheck._
 
 // scala standard library ----------------------------------------------------------------------------------------------
 import scala.util._
