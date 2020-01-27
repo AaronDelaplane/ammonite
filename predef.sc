@@ -44,6 +44,10 @@ implicit val lh = LogHandler.jdkLogHandler
 implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
 val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgresql:inventory", "postgres", "password")
 
+// enumeratum ----------------------------------------------------------------------------------------------------------
+import $ivy.`com.beachape::enumeratum:1.5.14`
+import enumeratum._
+
 // fs2 -----------------------------------------------------------------------------------------------------------------
 import $ivy.`co.fs2::fs2-core:2.1.0`
 import $ivy.`co.fs2::fs2-io:2.1.0`
@@ -54,6 +58,9 @@ import fs2.Stream
 import $ivy.`org.scalacheck::scalacheck:1.14.3`
 
 import org.scalacheck._
+import Gen._
+import Arbitrary._
+import org.scalacheck.Prop._
 
 // scala standard library ----------------------------------------------------------------------------------------------
 import scala.util._
