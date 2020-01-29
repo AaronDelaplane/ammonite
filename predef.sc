@@ -17,6 +17,11 @@ import cats.data._
 import cats.effect._
 import cats.implicits._
 
+// cats-retry ---------------------------------------------------------------------------------------------------------
+import $ivy.`com.github.cb372::cats-retry:1.0.0`
+
+import retry._
+
 // circe ---------------------------------------------------------------------------------------------------------------
 import $ivy.`io.circe::circe-core:0.12.3`
 import $ivy.`io.circe::circe-generic:0.12.3`
