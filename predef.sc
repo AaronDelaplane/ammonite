@@ -9,8 +9,8 @@ import org.http4s.dsl.io._
 import org.http4s.implicits._
 
 // cats ----------------------------------------------------------------------------------------------------------------
-import $ivy.`org.typelevel::cats-core:2.0.0`
-import $ivy.`org.typelevel::cats-effect:2.0.0`
+import $ivy.`org.typelevel::cats-core:2.1.1`
+import $ivy.`org.typelevel::cats-effect:2.1.1`
 
 import cats._
 import cats.data._
