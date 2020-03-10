@@ -45,9 +45,9 @@ import doobie.util.ExecutionContexts
 import doobie.postgres._
 import doobie.postgres.implicits._
 
-implicit val lh = LogHandler.jdkLogHandler
-implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
-val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgresql:inventory", "postgres", "password")
+//implicit val lh = LogHandler.jdkLogHandler
+//implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
+//val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgresql:inventory", "postgres", "password")
 
 // enumeratum ----------------------------------------------------------------------------------------------------------
 import $ivy.`com.beachape::enumeratum:1.5.15`
@@ -71,6 +71,12 @@ import org.scalacheck.Prop._
 import scala.util._
 import scala.util.matching._
 import scala.concurrent.duration
+import scala.concurrent.ExecutionContext.Implicits.global
 
 // java standard library -----------------------------------------------------------------------------------------------
 import java.util.UUID
+
+// implicits -----------------------------------------------------------------------------------------------------------
+implicit val cs: ContextShift[IO] = IO.contextShift(global)
+implicit val timer: Timer[IO] = IO.timer(global)
+
