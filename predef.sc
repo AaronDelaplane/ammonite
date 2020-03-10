@@ -34,8 +34,8 @@ import io.circe.parser._
 import io.circe.optics.JsonPath._
 
 // doobie --------------------------------------------------------------------------------------------------------------
-import $ivy.`org.tpolecat::doobie-core:0.8.6`
-import $ivy.`org.tpolecat::doobie-postgres:0.8.6`
+import $ivy.`org.tpolecat::doobie-core:0.8.8`
+import $ivy.`org.tpolecat::doobie-postgres:0.8.8`
 
 import doobie._
 import doobie.implicits._
