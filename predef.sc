@@ -50,12 +50,12 @@ implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
 val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgresql:inventory", "postgres", "password")
 
 // enumeratum ----------------------------------------------------------------------------------------------------------
-import $ivy.`com.beachape::enumeratum:1.5.14`
+import $ivy.`com.beachape::enumeratum:1.5.15`
 import enumeratum._
 
 // fs2 -----------------------------------------------------------------------------------------------------------------
-import $ivy.`co.fs2::fs2-core:2.1.0`
-import $ivy.`co.fs2::fs2-io:2.1.0`
+import $ivy.`co.fs2::fs2-core:2.2.2`
+import $ivy.`co.fs2::fs2-io:2.2.2`
 
 import fs2.Stream
 
