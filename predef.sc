@@ -23,9 +23,9 @@ import $ivy.`com.github.cb372::cats-retry:1.0.0`
 import retry._
 
 // circe ---------------------------------------------------------------------------------------------------------------
-import $ivy.`io.circe::circe-core:0.12.3`
-import $ivy.`io.circe::circe-generic:0.12.3`
-import $ivy.`io.circe::circe-parser:0.12.3`
+import $ivy.`io.circe::circe-core:0.13.0`
+import $ivy.`io.circe::circe-generic:0.13.0`
+import $ivy.`io.circe::circe-parser:0.13.0`
 import $ivy.`io.circe::circe-optics:0.12.0`
 //import $ivy.`io.circe::circe-fs2:0.12.0`
 
