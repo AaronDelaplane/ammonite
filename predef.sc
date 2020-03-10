@@ -1,8 +1,8 @@
 // http4s --------------------------------------------------------------------------------------------------------------
-import $ivy.`org.http4s::http4s-dsl:0.21.0-M5`
-import $ivy.`org.http4s::http4s-blaze-server:0.21.0-M5`
-import $ivy.`org.http4s::http4s-blaze-client:0.21.0-M5`
-import $ivy.`org.http4s::http4s-circe:0.21.0-M5`
+import $ivy.`org.http4s::http4s-dsl:0.21.1`
+import $ivy.`org.http4s::http4s-blaze-server:0.21.1`
+import $ivy.`org.http4s::http4s-blaze-client:0.21.1`
+import $ivy.`org.http4s::http4s-circe:0.21.1`
 
 import org.http4s._
 import org.http4s.dsl.io._
