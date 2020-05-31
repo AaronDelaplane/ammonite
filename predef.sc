@@ -9,13 +9,13 @@ import org.http4s.dsl.io._
 import org.http4s.implicits._
 
 // cats ----------------------------------------------------------------------------------------------------------------
-import $ivy.`org.typelevel::cats-core:2.1.1`
-import $ivy.`org.typelevel::cats-effect:2.1.1`
+import $ivy.`org.typelevel::cats-core:2.2.0-M2`
+import $ivy.`org.typelevel::cats-effect:2.1.3`
 
 import cats._
 import cats.data._
+import cats.syntax.all._
 import cats.effect._
-import cats.implicits._
 
 // cats-retry ---------------------------------------------------------------------------------------------------------
 import $ivy.`com.github.cb372::cats-retry:1.0.0`
@@ -49,6 +49,13 @@ import doobie.postgres.implicits._
 //implicit val cs = IO.contextShift(ExecutionContexts.synchronous)
 //val t = Transactor.fromDriverManager[IO]("org.postgresql.Driver", "jdbc:postgresql:inventory", "postgres", "password")
 
+// refined ------------------------------------------------------------------------------------------------------------
+import $ivy.`eu.timepit::refined:0.9.13`
+import eu.timepit.refined._
+import eu.timepit.refined.api.Refined
+import eu.timepit.refined.auto._
+import eu.timepit.refined.numeric._
+
 // enumeratum ----------------------------------------------------------------------------------------------------------
 import $ivy.`com.beachape::enumeratum:1.5.15`
 import enumeratum._
@@ -60,18 +67,25 @@ import $ivy.`co.fs2::fs2-io:2.2.2`
 import fs2.Stream
 
 // scalacheck ---------------------------------------------------------------------------------------------------------
-import $ivy.`org.scalacheck::scalacheck:1.14.3`
+//import $ivy.`org.scalacheck::scalacheck:1.14.3`
 
-import org.scalacheck._
-import Gen._
-import Arbitrary._
-import org.scalacheck.Prop._
+//import org.scalacheck._
+//import Gen._
+//import Arbitrary._
+//import org.scalacheck.Prop._
 
 // scala standard library ----------------------------------------------------------------------------------------------
 import scala.util._
 import scala.util.matching._
-import scala.concurrent.duration
+import scala.concurrent._
+import scala.concurrent.duration._
+import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.language.postfixOps
+import scala.collection.immutable._
+
+// scala standard module not in standard lib
+import $ivy.`org.scala-lang.modules::scala-parallel-collections:0.2.0`
 
 // java standard library -----------------------------------------------------------------------------------------------
 import java.util.UUID
