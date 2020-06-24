@@ -61,8 +61,8 @@ import $ivy.`com.beachape::enumeratum:1.5.15`
 import enumeratum._
 
 // fs2 -----------------------------------------------------------------------------------------------------------------
-import $ivy.`co.fs2::fs2-core:2.2.2`
-import $ivy.`co.fs2::fs2-io:2.2.2`
+import $ivy.`co.fs2::fs2-core:2.4.2`
+import $ivy.`co.fs2::fs2-io:2.4.2`
 
 import fs2.Stream
 
