@@ -129,8 +129,8 @@ import scala.concurrent.duration._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.language.postfixOps
-import scala.collection.immutable._
-// scala standard module not in standard lib
+//import scala.collection.immutable._ // be specific. will make Stream correspond to scala.Stream
+//scala standard module not in standard lib
 //import $ivy.`org.scala-lang.modules::scala-parallel-collections:0.2.0`
 
 
