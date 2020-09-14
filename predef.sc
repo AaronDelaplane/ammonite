@@ -92,6 +92,13 @@ import enumeratum._
 import $ivy.`co.fs2::fs2-core:2.4.4`
 import $ivy.`co.fs2::fs2-io:2.4.4`
 import fs2.Stream
+import fs2.Chunk
+
+
+
+// fs2-kafka ----------------------------------------------------------------------------------------------------------
+import $ivy.`com.github.fd4s::fs2-kafka:1.0.0`
+import fs2.kafka._
 
 
 
