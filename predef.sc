@@ -98,7 +98,18 @@ import fs2.Chunk
 
 // fs2-kafka ----------------------------------------------------------------------------------------------------------
 import $ivy.`com.github.fd4s::fs2-kafka:1.0.0`
+
+interp.repositories() ++= Seq(coursierapi.MavenRepository.of("https://packages.confluent.io/maven/"))
+@
+import $ivy.`com.github.fd4s::fs2-kafka-vulcan:1.0.0`
+
+import $ivy.`com.github.fd4s::vulcan:1.2.0`
+
 import fs2.kafka._
+import fs2.kafka
+import fs2.kafka.vulcan._
+import fs2.kafka._
+import org.apache.kafka.clients.admin.NewTopic
 
 
 
